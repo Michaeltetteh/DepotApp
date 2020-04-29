@@ -82,7 +82,7 @@ class ProductTest < ActiveSupport::TestCase
 
   test "title is greater than or equal to 10" do
     product = Product.new(
-      title:        "title less",
+      title:        "title",
       description:  "fsda",
       image_url:    "fred.gif",
       price:        1
