@@ -80,4 +80,20 @@ class ProductTest < ActiveSupport::TestCase
   #   product.errors[:title]
   # end
 
+  test "title is greater than or equal to 10" do
+    product = Product.new(
+      title:        "title less",
+      description:  "fsda",
+      image_url:    "fred.gif",
+      price:        1
+    )
+    if (product.title.length >= 10)
+      assert product.valid?, "Title is valid"
+      # assert_equal ["title is greater or equal to 10"], product.errors[:title]
+    else
+      assert product.invalid?,'Title is invalid'
+      # assert_equal ["title is less than 10"], product.errors[:title]
+    end
+  end
+
 end
