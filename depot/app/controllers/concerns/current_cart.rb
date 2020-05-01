@@ -8,6 +8,7 @@ module CurrentCart
       session[:cart_id] = @cart.id
     end
   
+    
   private
     def sess_counter
       if session[:counter].nil?
