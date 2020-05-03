@@ -1,6 +1,6 @@
 class StoreController < ApplicationController
   include CurrentCart
-
+  before_action :set_cart
   before_action :sess_counter, only: [:index]
 
   def index
